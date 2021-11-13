@@ -1,0 +1,17 @@
+.banner {
+  background-image: url("../../../images/Banner/banner1.jpg");
+
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+}
+.title-color {
+  color: rgb(129, 21, 143);
+  font-weight: 900;
+}
+
+@media only screen and (max-width: 600px) {
+  .banner {
+    height: 200px;
+  }
+}

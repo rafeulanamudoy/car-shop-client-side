@@ -1,0 +1,7 @@
+textarea {
+  width: 70%;
+  padding: 7px;
+
+  border: 2px solid #ccc;
+  box-sizing: border-box;
+}

@@ -1,0 +1,16 @@
+@media only screen and (max-width: 600px) {
+  .table-container {
+    width: 98vw;
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  thead,
+  tbody {
+    font-size: xx-small;
+  }
+  .btn-size {
+    font-size: xx-small;
+    font-weight: lighter;
+  }
+}
