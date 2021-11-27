@@ -3,9 +3,9 @@
 Project Link [ Car Shop](https://car-shop-dec70.web.app/).
 
 ## our site :
-- when users purchase product they can show their product in dashboard My Orders section.
+- When users purchase product they can show their product in dashboard My Orders section.
 - User can cancel their order if they want.
-- user can give their reveiw in My Reveiw section.user valiable feedback will show dynamically in home page
+- User can give their reveiw in My Reveiw section.user valiable feedback will show dynamically in home page
 - If admin login to the system they can manage all orders in Dashboard Manage Order Section
 - Admin can add Product dynamically in Dashboard Add product section.
 - After adding product by admin it will show dynamically in home section.
@@ -16,4 +16,4 @@ Project Link [ Car Shop](https://car-shop-dec70.web.app/).
 - For Buiding Client-Side:React,React Router,React-Bootstrap,Material-Ui,Firebase.
 - For Building Backend-Side:Express.js,MongoDB
 
--
+
