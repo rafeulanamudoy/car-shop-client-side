@@ -7,7 +7,7 @@ const AddProducts = () => {
   const onSubmit = (data) => {
     console.log(data);
     axios
-      .post("https://rocky-dusk-24163.herokuapp.com/products", data)
+      .post("https://car-shop-backend-site.vercel.app/products", data)
       .then((res) => {
         console.log(res);
         if (res.data.insertedId) {

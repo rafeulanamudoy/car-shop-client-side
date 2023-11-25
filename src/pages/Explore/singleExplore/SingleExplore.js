@@ -6,7 +6,7 @@ const SingleExplore = (props) => {
   return (
     <div className="col">
       <div className="card">
-        <img src={img} className="card-img-top img-set" />
+        <img src={img} className="card-img-top img-set" alt="productImage" />
         <div className="card-body">
           <h5 className="card-title text-center text-danger ">
             Name:{productName}

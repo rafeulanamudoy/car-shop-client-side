@@ -1,47 +1,13 @@
 .register-form {
-  border: 2px solid green;
+  width: 650px;
+  height: 650px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  margin: auto;
+  justify-content: center;
 
-  background-color: rgba(5, 44, 55, 0.386);
-  width: 40vw;
-}
-
-input[type="password"],
-input[type="email"],
-input[type="text"] {
-  width: 70%;
-  padding: 7px;
-  margin-top: 12px;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  margin-bottom: 12px;
-  border: 2px solid #ccc;
-  box-sizing: border-box;
-}
-
-.button-style {
-  display: block;
-  background-color: rgb(156, 90, 147);
-  border-radius: 8px;
-  border: 2px solid white;
-  width: 25%;
-  margin-left: auto;
-  margin-right: auto;
-  margin-bottom: 25px;
-  font-weight: 800;
-  color: white;
-  line-height: 40px;
-}
-.reg-img-set {
-  grid-gap: 0;
-}
-@media only screen and (max-width: 600px) {
-  .button-style {
-    font-weight: 600;
-    font-size: small;
-    width: 45%;
-  }
-  .register-form {
-    width: 94.1vw;
-  }
+  color: black;
+  background-color: white;
+  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.5);
 }

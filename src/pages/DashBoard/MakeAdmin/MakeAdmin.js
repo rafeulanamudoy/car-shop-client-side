@@ -11,7 +11,7 @@ const MakeAdmin = () => {
   };
   const handleSumbit = (e) => {
     const user = { email };
-    fetch("https://rocky-dusk-24163.herokuapp.com/users/admin", {
+    fetch("https://car-shop-backend-site.vercel.app/users/admin", {
       method: "PUT",
       headers: {
         "content-type": "application/json",

@@ -12,8 +12,10 @@ import partner6 from "../../../images/Partners/6.jpg";
 const Partners = () => {
   return (
     <div>
-      <h1 className="text-center fw-bold text-info">Our Partners</h1>
-      <div className="partner-container  text-center">
+      <h1 className=" my-5  text-center text-uppercase fw-bold text-light">
+        Our Partners
+      </h1>
+      <div className="partner-container  text-center mb-5">
         <img className="img-fluid  img-thumbnail " src={partner1} alt="" />
         <img className="img-fluid img-thumbnail " src={partner3} alt="" />
         <img className="img-fluid  img-thumbnail" src={partner2} alt="" />

@@ -35,7 +35,7 @@ const useFirebase = () => {
           })
           .catch((error) => {
             // An error occurred
-            // ...
+            setError(error);
           });
         history.push("/");
 
@@ -52,15 +52,10 @@ const useFirebase = () => {
           });
 
         // Signed in
-        const user = userCredential.user;
-
-        console.log(user);
 
         // ...
       })
       .catch((error) => {
-        const errorCode = error.code;
-
         setError(error.message);
         // ..
       })
@@ -73,13 +68,11 @@ const useFirebase = () => {
         const destination = location.state.from || "/";
         history.replace(destination);
         // Signed in
-        const user = userCredential.user;
+
         setError("");
         // ...
       })
       .catch((error) => {
-        const errorCode = error.code;
-
         setError(error.message);
       })
       .finally(() => setLoading(false));
@@ -90,7 +83,7 @@ const useFirebase = () => {
       if (user) {
         // User is signed in, see docs for a list of available properties
         // https://firebase.google.com/docs/reference/js/firebase.User
-        const uid = user.uid;
+
         setUser(user);
         // ...
       } else {
@@ -100,10 +93,10 @@ const useFirebase = () => {
     });
 
     return () => unsubscribed;
-  }, []);
+  }, [auth]);
 
   useEffect(() => {
-    fetch(`https://rocky-dusk-24163.herokuapp.com/users/${user?.email}`)
+    fetch(`https://car-shop-backend-site.vercel.app/users/${user?.email}`)
       .then((res) => res.json())
       .then((data) => setAdmin(data.admin));
   }, [user?.email]);
@@ -121,7 +114,7 @@ const useFirebase = () => {
 
   const saveUserToDatabase = (email, displayName, method) => {
     const userinDatabase = { email, displayName };
-    fetch("https://rocky-dusk-24163.herokuapp.com/users", {
+    fetch("https://car-shop-backend-site.vercel.app/users", {
       method: method,
       headers: {
         "content-type": "application/json",

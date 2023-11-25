@@ -10,7 +10,7 @@ const Review = () => {
 
   const onSubmit = (data) => {
     axios
-      .post("https://rocky-dusk-24163.herokuapp.com/review", data)
+      .post("https://car-shop-backend-site.vercel.app/review", data)
       .then((res) => {
         //   console.log(res);
         if (res.data.insertedId) {
@@ -37,7 +37,11 @@ const Review = () => {
           placeholder="Your Valuable Review"
           required
         />
-        <input type="text" {...register("rating")} />
+        <input
+          type="text"
+          placeholder="give Your rating in number"
+          {...register("rating")}
+        />
 
         <input
           type="submit"

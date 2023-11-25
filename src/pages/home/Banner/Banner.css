@@ -4,6 +4,7 @@
   background-repeat: no-repeat;
   background-size: cover;
   height: 100vh;
+  width: 100vw;
 }
 .title-color {
   color: rgb(129, 21, 143);

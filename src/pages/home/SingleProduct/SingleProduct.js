@@ -2,11 +2,11 @@ import React from "react";
 import { Link } from "react-router-dom";
 import "./SingleProduct.css";
 const SingleProduct = (props) => {
-  const { productName, price, img, desc } = props.singleProduct;
+  const { productName, price, img, desc } = props?.singleProduct;
   return (
     <div className="col">
       <div className="card">
-        <img src={img} className="card-img-top img-set" />
+        <img src={img} className="card-img-top img-set" alt="productImage" />
         <div className="card-body">
           <h5 className="card-title text-center text-danger">
             Name:{productName}

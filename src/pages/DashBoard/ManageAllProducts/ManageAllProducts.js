@@ -4,7 +4,7 @@ const ManageAllProducts = () => {
   const [manageOrder, setManageOrder] = useState([]);
 
   useEffect(() => {
-    fetch("https://rocky-dusk-24163.herokuapp.com/allorders")
+    fetch("https://car-shop-backend-site.vercel.app/allorders")
       .then((res) => res.json())
       .then((data) => setManageOrder(data));
   }, []);
@@ -13,7 +13,7 @@ const ManageAllProducts = () => {
     // console.log("clicked", id);
     const proceed = window.confirm("are you sure you want to delete");
     if (proceed) {
-      fetch(`https://rocky-dusk-24163.herokuapp.com/allorders/${id}`, {
+      fetch(`https://car-shop-backend-site.vercel.app/allorders/${id}`, {
         method: "delete",
       })
         .then((res) => res.json())

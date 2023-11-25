@@ -5,7 +5,7 @@ const Explore = () => {
   const [allProducts, setAllProducts] = useState([]);
 
   useEffect(() => {
-    fetch("https://rocky-dusk-24163.herokuapp.com/products")
+    fetch("https://car-shop-backend-site.vercel.app/products")
       .then((res) => res.json())
       .then((data) => setAllProducts(data));
   }, []);
@@ -35,7 +35,7 @@ const SingleManageProduct = (props) => {
   const handleProductDelteId = (id) => {
     const proceed = window.confirm("are you sure you want to delete");
     if (proceed) {
-      fetch(`https://rocky-dusk-24163.herokuapp.com/products/${id}`, {
+      fetch(`https://car-shop-backend-site.vercel.app/products/${id}`, {
         method: "delete",
       })
         .then((res) => res.json())
@@ -54,7 +54,7 @@ const SingleManageProduct = (props) => {
   return (
     <div className="col">
       <div className="card " style={{ height: "500px" }}>
-        <img src={img} className="card-img-top img-set" />
+        <img src={img} className="card-img-top img-set" alt="cardImage" />
         <div className="card-body">
           <h5 className="card-title text-center text-danger ">
             Name:{productName}

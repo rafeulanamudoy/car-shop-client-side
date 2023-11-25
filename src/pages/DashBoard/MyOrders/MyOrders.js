@@ -8,15 +8,15 @@ const MyOrders = () => {
   const [myOrder, setMyOrder] = useState([]);
 
   useEffect(() => {
-    fetch(`https://rocky-dusk-24163.herokuapp.com/orders?email=${user.email}`)
+    fetch(`https://car-shop-backend-site.vercel.app/orders?email=${user.email}`)
       .then((req) => req.json())
       .then((data) => setMyOrder(data));
-  }, []);
+  }, [user.email]);
 
   const handleOrderDelteId = (id) => {
     const proceed = window.confirm("are you sure you want to delete");
     if (proceed) {
-      fetch(`https://rocky-dusk-24163.herokuapp.com/orders/${id}`, {
+      fetch(`https://car-shop-backend-site.vercel.app/orders/${id}`, {
         method: "delete",
       })
         .then((res) => res.json())

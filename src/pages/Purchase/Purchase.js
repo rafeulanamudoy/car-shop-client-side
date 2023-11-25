@@ -14,13 +14,15 @@ const Purchase = () => {
   const { user } = useAuth();
 
   const onSubmit = (data) => {
-    axios.post("https://rocky-dusk-24163.herokuapp.com/orders", data).then((res) => {
-      //   console.log(res);
-      if (res.data.insertedId) {
-        alert("your order has been placed  succesfully");
-        reset();
-      }
-    });
+    axios
+      .post("https://car-shop-backend-site.vercel.app/orders", data)
+      .then((res) => {
+        //   console.log(res);
+        if (res.data.insertedId) {
+          alert("your order has been placed  succesfully");
+          reset();
+        }
+      });
   };
   return (
     <div>

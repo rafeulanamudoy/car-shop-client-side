@@ -9,12 +9,14 @@ import Partners from "../Partners/Partners";
 const Home = () => {
   return (
     <div>
-      <Navigation></Navigation>
-      <Banner></Banner>
-      <Products></Products>
-      <Reviews></Reviews>
-      <Partners></Partners>
-      <Footer></Footer>
+      <div className="bg-dark">
+        <Navigation></Navigation>
+        <Banner></Banner>
+        <Products></Products>
+        <Reviews></Reviews>
+        <Partners></Partners>
+        <Footer></Footer>
+      </div>
     </div>
   );
 };

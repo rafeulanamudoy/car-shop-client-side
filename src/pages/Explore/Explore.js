@@ -7,21 +7,25 @@ const Explore = () => {
   const [allProducts, setAllProducts] = useState([]);
 
   useEffect(() => {
-    fetch("https://rocky-dusk-24163.herokuapp.com/products")
+    fetch("https://car-shop-backend-site.vercel.app/products")
       .then((res) => res.json())
       .then((data) => setAllProducts(data));
   }, []);
   return (
     <div>
       <Navigation></Navigation>
-      <h2 className="text-center fw-bold text-danger">Our All Cars</h2>
-      <div className="row row-cols-1 row-cols-md-3 g-4 container-set ">
-        {allProducts.map((singleExplore) => (
-          <SingleExplore
-            key={singleExplore.key}
-            singleExplore={singleExplore}
-          ></SingleExplore>
-        ))}
+      <div className="explore-container">
+        <h2 className="text-center py-5 fw-bold text-white text-uppercase">
+          All Cars
+        </h2>
+        <div className="row row-cols-1 row-cols-md-3 g-4 w-75 mx-auto pb-5 container-set ">
+          {allProducts.map((singleExplore) => (
+            <SingleExplore
+              key={singleExplore?._id}
+              singleExplore={singleExplore}
+            ></SingleExplore>
+          ))}
+        </div>
       </div>
     </div>
   );

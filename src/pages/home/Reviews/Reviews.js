@@ -5,15 +5,17 @@ const Reviews = () => {
   const [allReviews, setAllReviews] = useState([]);
 
   useEffect(() => {
-    fetch("https://rocky-dusk-24163.herokuapp.com/review")
+    fetch("https://car-shop-backend-site.vercel.app/review")
       .then((res) => res.json())
       .then((data) => setAllReviews(data));
   }, []);
 
   return (
     <div>
-      <h1 className="text-center text-danger dw-bold">User Reviews</h1>
-      <div className="row row-cols-1 row-cols-md-3 g-4 container-set ">
+      <h1 className="text-center text-uppercase text-light my-5">
+        User Reviews
+      </h1>
+      <div className="row row-cols-1 w-75 mx-auto row-cols-md-3 g-4 container-set ">
         {allReviews.map((singleReview) => (
           <SingleReview
             key={singleReview._id}

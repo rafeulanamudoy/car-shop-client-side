@@ -1,0 +1,4 @@
+.explore-container {
+  background-color: rgb(28, 6, 58);
+  min-height: calc(100vh - 96px);
+}

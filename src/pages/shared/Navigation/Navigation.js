@@ -34,7 +34,7 @@ const Navigation = () => {
               activeStyle={{ color: "red" }}
               to="/home#products"
             >
-              Products
+              Featured Cars
             </Nav.Link>
             <Nav.Link
               className="fw-bold fs-6 "
