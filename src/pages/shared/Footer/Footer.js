@@ -10,8 +10,6 @@ const Footer = () => {
         </h2>
 
         <h4>We Sell The Best Car In The City</h4>
-
-        <p> © Rafeul Anam Udoy 2021.A programming iniative</p>
       </footer>
     </div>
   );
