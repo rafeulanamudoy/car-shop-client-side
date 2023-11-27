@@ -11,13 +11,16 @@ const MakeAdmin = () => {
   };
   const handleSumbit = (e) => {
     const user = { email };
-    fetch("https://car-shop-backend-site.vercel.app/users/admin", {
-      method: "PUT",
-      headers: {
-        "content-type": "application/json",
-      },
-      body: JSON.stringify(user),
-    })
+    fetch(
+      "https://car-shop-backend-side-production.up.railway.app/users/admin",
+      {
+        method: "PUT",
+        headers: {
+          "content-type": "application/json",
+        },
+        body: JSON.stringify(user),
+      }
+    )
       .then((res) => res.json())
       .then((data) => {
         if (data.modifiedCount) {

@@ -15,7 +15,10 @@ const Purchase = () => {
 
   const onSubmit = (data) => {
     axios
-      .post("https://car-shop-backend-site.vercel.app/orders", data)
+      .post(
+        "https://car-shop-backend-side-production.up.railway.app/orders",
+        data
+      )
       .then((res) => {
         //   console.log(res);
         if (res.data.insertedId) {

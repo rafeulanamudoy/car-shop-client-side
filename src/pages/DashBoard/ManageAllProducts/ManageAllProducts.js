@@ -4,7 +4,7 @@ const ManageAllProducts = () => {
   const [manageOrder, setManageOrder] = useState([]);
 
   useEffect(() => {
-    fetch("https://car-shop-backend-site.vercel.app/allorders")
+    fetch("https://car-shop-backend-side-production.up.railway.app/allorders")
       .then((res) => res.json())
       .then((data) => setManageOrder(data));
   }, []);
@@ -13,9 +13,12 @@ const ManageAllProducts = () => {
     // console.log("clicked", id);
     const proceed = window.confirm("are you sure you want to delete");
     if (proceed) {
-      fetch(`https://car-shop-backend-site.vercel.app/allorders/${id}`, {
-        method: "delete",
-      })
+      fetch(
+        `https://car-shop-backend-side-production.up.railway.app/allorders/${id}`,
+        {
+          method: "delete",
+        }
+      )
         .then((res) => res.json())
         .then((data) => {
           if (data?.deletedCount > 0) {

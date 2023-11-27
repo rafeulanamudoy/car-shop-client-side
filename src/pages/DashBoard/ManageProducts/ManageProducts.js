@@ -5,7 +5,7 @@ const Explore = () => {
   const [allProducts, setAllProducts] = useState([]);
 
   useEffect(() => {
-    fetch("https://car-shop-backend-site.vercel.app/products")
+    fetch("https://car-shop-backend-side-production.up.railway.app/products")
       .then((res) => res.json())
       .then((data) => setAllProducts(data));
   }, []);
@@ -35,9 +35,12 @@ const SingleManageProduct = (props) => {
   const handleProductDelteId = (id) => {
     const proceed = window.confirm("are you sure you want to delete");
     if (proceed) {
-      fetch(`https://car-shop-backend-site.vercel.app/products/${id}`, {
-        method: "delete",
-      })
+      fetch(
+        `https://car-shop-backend-side-production.up.railway.app/products/${id}`,
+        {
+          method: "delete",
+        }
+      )
         .then((res) => res.json())
         .then((data) => {
           if (data?.deletedCount > 0) {

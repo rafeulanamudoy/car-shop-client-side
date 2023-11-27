@@ -7,7 +7,7 @@ const Explore = () => {
   const [allProducts, setAllProducts] = useState([]);
 
   useEffect(() => {
-    fetch("https://car-shop-backend-site.vercel.app/products")
+    fetch("https://car-shop-backend-side-production.up.railway.app/products")
       .then((res) => res.json())
       .then((data) => setAllProducts(data));
   }, []);

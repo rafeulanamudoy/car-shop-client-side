@@ -10,7 +10,10 @@ const Review = () => {
 
   const onSubmit = (data) => {
     axios
-      .post("https://car-shop-backend-site.vercel.app/review", data)
+      .post(
+        "https://car-shop-backend-side-production.up.railway.app/review",
+        data
+      )
       .then((res) => {
         //   console.log(res);
         if (res.data.insertedId) {

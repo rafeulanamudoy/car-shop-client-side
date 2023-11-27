@@ -7,7 +7,10 @@ const AddProducts = () => {
   const onSubmit = (data) => {
     console.log(data);
     axios
-      .post("https://car-shop-backend-site.vercel.app/products", data)
+      .post(
+        "https://car-shop-backend-side-production.up.railway.app/products",
+        data
+      )
       .then((res) => {
         console.log(res);
         if (res.data.insertedId) {

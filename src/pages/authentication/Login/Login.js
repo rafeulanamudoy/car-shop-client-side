@@ -13,7 +13,7 @@ const Login = () => {
   const [loginData, setLoginData] = useState({});
   const location = useLocation();
   const history = useHistory();
-  const { user, loginUser, loading } = useAuth();
+  const { user, loginUser, loading, error } = useAuth();
 
   const handleOnBlur = (e) => {
     const field = e.target.name;

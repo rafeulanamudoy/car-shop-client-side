@@ -8,7 +8,9 @@ const MyOrders = () => {
   const [myOrder, setMyOrder] = useState([]);
 
   useEffect(() => {
-    fetch(`https://car-shop-backend-site.vercel.app/orders?email=${user.email}`)
+    fetch(
+      `https://car-shop-backend-side-production.up.railway.app/orders?email=${user.email}`
+    )
       .then((req) => req.json())
       .then((data) => setMyOrder(data));
   }, [user.email]);
@@ -16,9 +18,12 @@ const MyOrders = () => {
   const handleOrderDelteId = (id) => {
     const proceed = window.confirm("are you sure you want to delete");
     if (proceed) {
-      fetch(`https://car-shop-backend-site.vercel.app/orders/${id}`, {
-        method: "delete",
-      })
+      fetch(
+        `https://car-shop-backend-side-production.up.railway.app/orders/${id}`,
+        {
+          method: "delete",
+        }
+      )
         .then((res) => res.json())
         .then((data) => {
           if (data?.deletedCount > 0) {

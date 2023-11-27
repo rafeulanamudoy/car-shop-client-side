@@ -36,6 +36,7 @@ const useFirebase = () => {
           .catch((error) => {
             // An error occurred
             setError(error);
+            alert(error.message);
           });
         history.push("/");
 
@@ -57,6 +58,7 @@ const useFirebase = () => {
       })
       .catch((error) => {
         setError(error.message);
+        alert(error.message);
         // ..
       })
       .finally(() => setLoading(false));
@@ -74,6 +76,7 @@ const useFirebase = () => {
       })
       .catch((error) => {
         setError(error.message);
+        alert(error.message);
       })
       .finally(() => setLoading(false));
   };
@@ -96,7 +99,9 @@ const useFirebase = () => {
   }, [auth]);
 
   useEffect(() => {
-    fetch(`https://car-shop-backend-site.vercel.app/users/${user?.email}`)
+    fetch(
+      `https://car-shop-backend-side-production.up.railway.app/users/${user?.email}`
+    )
       .then((res) => res.json())
       .then((data) => setAdmin(data.admin));
   }, [user?.email]);
@@ -114,7 +119,7 @@ const useFirebase = () => {
 
   const saveUserToDatabase = (email, displayName, method) => {
     const userinDatabase = { email, displayName };
-    fetch("https://car-shop-backend-site.vercel.app/users", {
+    fetch("https://car-shop-backend-side-production.up.railway.app/users", {
       method: method,
       headers: {
         "content-type": "application/json",
